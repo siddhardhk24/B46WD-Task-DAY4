@@ -1,5 +1,5 @@
 2.Use the Rest countries API-url==>Display all countries flag
-my sol:
+MY Code:
 var cnt= new XMLHttpRequest();
 cnt.open('GET','https://restcountries.com/v3.1/all');
 cnt.responseType='json';
