@@ -1,0 +1,14 @@
+2.Use the Rest countries API-url==>Display all countries flag
+my sol:
+var cnt= new XMLHttpRequest();
+cnt.open('GET','https://restcountries.com/v3.1/all');
+cnt.responseType='json';
+cnt.send();
+cnt.onload=function()
+{
+    var respObj=cnt.response;
+    
+   for(var i=0;i<respObj.length;i++)
+    console.log(respObj[i].flag);
+}
+
