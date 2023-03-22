@@ -1,0 +1,16 @@
+Use the Rest countries API and print countries name,region,sub region and population.
+MY Code:
+var cnt= new XMLHttpRequest();
+cnt.open('GET','https://restcountries.com/v3.1/all');
+cnt.responseType='json';
+cnt.send();
+cnt.onload=function()
+{
+    var respObj=cnt.response;
+    
+  for(var i=0;i<respObj.length;i++)
+  
+    console.log("NAMES:"+respObj[i].name.common +" ; "+"REGION:"+respObj[i].region +" ; "+"SUB-REGION:"+respObj[i].subregion +" ; "+ "POPULATION:"+respObj[i].population);
+    
+}
+
